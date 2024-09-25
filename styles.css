@@ -6,8 +6,8 @@ body, h1, h2, p, ul {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #EAEAEA; /* Light background */
-    color: #333;
+    background-color: #001F3F; /* Dark blue background */
+    color: #FFFFFF; /* White text for contrast */
 }
 
 header {
