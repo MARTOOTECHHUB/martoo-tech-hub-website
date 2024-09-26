@@ -1,57 +1,63 @@
-/* Reset some default styles */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
+/* Base styles for the page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #001F3F; /* Dark blue background */
-    color: #FFFFFF; /* White text for contrast */
+    background-color: darkblue; /* Set the background color as requested */
+    color: white;
 }
 
 header {
-    background-color: #8B4513; /* Earthy brown */
+    background-color: #333;
+    padding: 10px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
     color: white;
-    padding: 10px 0;
-    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
 }
 
-nav a {
-    color: white;
+nav ul li a {
     text-decoration: none;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    background-color: #8B4513; /* Earthy brown */
-}
-
-nav ul li:hover > ul {
+    color: white;
+    padding: 10px;
     display: block;
 }
 
-main {
-    padding: 20px;
+nav ul li ul {
+    display: none; /* Hide the dropdown by default */
+    position: absolute;
+    background-color: #444;
+    padding: 10px;
+    list-style-type: none;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #4B0082; /* Indigo for contrast */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+nav ul li ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+nav ul li:hover ul, /* Show the dropdown when hovered */
+nav ul li.active ul { /* Show the dropdown when the parent menu is active (clicked) */
+    display: block;
+}
+
+/* Hamburger menu styles */
+#navMenu {
+    display: none;
+}
+
+#navMenu.active {
+    display: block; /* Show the menu when the hamburger is clicked */
 }
