@@ -3,11 +3,16 @@ body {
     font-family: Arial, sans-serif;
     background-color: darkblue; /* Set the background color as requested */
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #333;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hamburger {
@@ -48,9 +53,8 @@ nav ul li ul li {
     margin: 5px 0;
 }
 
-nav ul li:hover ul, /* Show the dropdown when hovered */
-nav ul li.active ul { /* Show the dropdown when the parent menu is active (clicked) */
-    display: block;
+nav ul li.active ul { 
+    display: block; /* Show the dropdown when the parent menu is active (clicked) */
 }
 
 /* Hamburger menu styles */
@@ -60,4 +64,33 @@ nav ul li.active ul { /* Show the dropdown when the parent menu is active (click
 
 #navMenu.active {
     display: block; /* Show the menu when the hamburger is clicked */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
 }
