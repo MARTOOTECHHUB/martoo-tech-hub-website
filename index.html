@@ -7,49 +7,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header and Navigation -->
     <header>
-        <h1>Welcome to Martoo Tech Hub</h1>
-        <nav>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <nav id="navMenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">POST</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li>
+                    <a href="#">SERVICES</a>
                     <ul>
-                        <li><a href="typing.html">Typing Assignments</a></li>
-                        <li><a href="vpn.html">VPN Services</a>
+                        <li><a href="#">Typing Assistant</a></li>
+                        <li><a href="#">VPN</a>
                             <ul>
-                                <li><a href="vmess.html">VMess</a></li>
-                                <li><a href="trojan.html">Trojan</a></li>
-                                <li><a href="udp.html">UDP</a></li>
+                                <li><a href="#">VMess</a></li>
+                                <li><a href="#">Trojan</a></li>
+                                <li><a href="#">UDP</a></li>
                             </ul>
                         </li>
-                        <li><a href="materials.html">School Materials</a></li>
+                        <li><a href="#">Materials</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <section>
-            <h2>Overview</h2>
-            <p>Welcome to Martoo Tech Hub, your go-to resource for enhancing your skills and knowledge. We are dedicated to supporting students in their learning journey by providing valuable resources, including typing assignments, VPN services, and essential school materials. Explore our offerings and take the next step toward academic success!</p>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li><strong>Typing Assignments:</strong> Access resources and tutorials designed to improve your typing speed and accuracy.</li>
-                <li><strong>VPN Services:</strong> Learn how to protect your online privacy and access restricted content safely.</li>
-                <li><strong>School Materials:</strong> Find curated study materials and tools that will aid you in your academic endeavors.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Call to Action</h2>
-            <p>Get started by navigating through our services and discovering how we can assist you in your learning journey. If you have any questions, feel free to contact us!</p>
-        </section>
+        <h1>Welcome to Martoo Tech Hub!</h1>
+        <p>Your go-to resource for typing assignments, VPN services, and essential school materials.</p>
     </main>
+
+    <!-- Footer with Social Media Links -->
     <footer>
-        <p>&copy; 2024 Martoo Tech Hub. All rights reserved.</p>
+        <p>© 2024 Martoo Tech Hub. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://youtube.com/@martootech?si=WtTmTBtO6VjvajdN" target="_blank">
+                <img src="youtube-icon.png" alt="YouTube" class="icon">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61561559594029" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" class="icon">
+            </a>
+            <a href="https://wa.me/260950322498" target="_blank">
+                <img src="whatsapp-icon.png" alt="WhatsApp" class="icon">
+            </a>
+        </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+            }
+        }
+    </script>
 </body>
 </html>
