@@ -56,8 +56,8 @@ nav ul li ul li {
     margin: 5px 0;
 }
 
-nav ul li.active ul { 
-    display: block; /* Show the dropdown when the parent menu is active (clicked) */
+nav ul li ul.active { 
+    display: block; /* Show the dropdown when the parent menu is clicked */
 }
 
 /* Hamburger menu styles */
