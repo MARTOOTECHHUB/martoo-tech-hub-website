@@ -16,11 +16,12 @@
                 <li><a href="#">POST</a></li>
                 <li><a href="#">ABOUT</a></li>
                 <li>
-                    <a href="#">SERVICES</a>
-                    <ul>
+                    <a href="#" onclick="toggleDropdown(this)">SERVICES</a>
+                    <ul class="dropdown">
                         <li><a href="#">Typing Assistant</a></li>
-                        <li><a href="#">VPN</a>
-                            <ul>
+                        <li>
+                            <a href="#" onclick="toggleDropdown(this)">VPN</a>
+                            <ul class="dropdown">
                                 <li><a href="#">VMess</a></li>
                                 <li><a href="#">Trojan</a></li>
                                 <li><a href="#">UDP</a></li>
@@ -42,7 +43,6 @@
 
     <!-- Footer with Social Media Links -->
     <footer>
-        <p>© 2024 Martoo Tech Hub. All rights reserved.</p>
         <div class="social-icons">
             <a href="https://youtube.com/@martootech?si=WtTmTBtO6VjvajdN" target="_blank">
                 <img src="youtube-icon.png" alt="YouTube" class="icon">
@@ -54,12 +54,18 @@
                 <img src="whatsapp-icon.png" alt="WhatsApp" class="icon">
             </a>
         </div>
+        <p>© 2024 Martoo Tech Hub. All rights reserved.</p>
     </footer>
 
     <script>
         function toggleMenu() {
             var menu = document.getElementById("navMenu");
-            menu.classList.toggle("active"); // Toggle the active class to show/hide the menu
+            menu.classList.toggle("active");
+        }
+
+        function toggleDropdown(element) {
+            var dropdown = element.nextElementSibling;
+            dropdown.classList.toggle("active");
         }
     </script>
 </body>
